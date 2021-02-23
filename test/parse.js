@@ -35,8 +35,32 @@ describe('Parsing ONIX 3', function() {
       product.description.contributors[0].note.should.eql('bio notes');
     });
 
+    it('should find details about the contributors', function() {
+      product.description.contributors[0].places.length.should.eql(1);
+      product.description.contributors[0].places[0].relator.should.eql(8);
+      product.description.contributors[0].places[0].countryCode.should.eql('CA');
+      product.description.contributors[0].gender.should.eql('u');
+      product.description.contributors[0].dates.length.should.eql(1);
+      product.description.contributors[0].dates[0].role.should.eql(50);
+      product.description.contributors[0].dates[0].date.should.eql('19880507T174343-0400');
+      product.description.contributors[0].websites.length.should.eql(2);
+      product.description.contributors[0].websites[1].role.should.eql(42);
+      product.description.contributors[0].websites[1].link.should.eql('https://www.twitter.com/author');
+      product.description.contributors[0].identifiers.length.should.eql(2);
+      product.description.contributors[0].identifiers[1].type.should.eql(16);
+      product.description.contributors[0].identifiers[1].value.should.eql('0000000068287141');
+      product.description.contributors[0].identifiers[0].typeName.should.eql('XYZ Author ID');
+    });
+
     it('should find the product publisher name', function() {
       product.publishingDetail.publisher.name.should.eql('The Publisher');
+    });
+
+    it('should find the publisher identifiers', function() {
+      product.publishingDetail.publisher.identifiers.length.should.eql(1);
+      product.publishingDetail.publisher.identifiers[0].type.should.eql(1);
+      product.publishingDetail.publisher.identifiers[0].typeName.should.eql('Proprietary');
+      product.publishingDetail.publisher.identifiers[0].value.should.eql('345');
     });
 
     it('should find the product publishing status', function() {
@@ -104,6 +128,8 @@ describe('Parsing ONIX 3', function() {
       relatedProducts[0].productIdentifiers[0].type.should.eql(1);
       relatedProducts[0].productIdentifiers[0].value.should.eql('some_other_id');
       relatedProducts[0].productForm.should.eql('EA');
+      relatedProducts[2].productForm.should.eql('EA');
+      relatedProducts[2].productFormDetail.should.eql('E107');
     });
 
     it('should find the product form', function() {

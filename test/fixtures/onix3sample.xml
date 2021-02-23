@@ -49,6 +49,15 @@
       <Contributor>
         <SequenceNumber>1</SequenceNumber>
         <ContributorRole>A01</ContributorRole>
+        <NameIdentifier>
+          <NameIDType>01</NameIDType>
+          <IDTypeName>XYZ Author ID</IDTypeName>
+          <IDValue>580</IDValue>
+        </NameIdentifier>
+        <NameIdentifier>
+          <NameIDType>16</NameIDType>
+          <IDValue>0000000068287141</IDValue>
+        </NameIdentifier>
         <PersonName>AuthorFirst AuthorLast</PersonName>
         <PersonNameInverted>AuthorLast, AuthorFirst</PersonNameInverted>
         <NamesBeforeKey>AuthorFirst</NamesBeforeKey>
@@ -58,6 +67,20 @@
           <ContributorPlaceRelator>08</ContributorPlaceRelator>
           <CountryCode>CA</CountryCode>
         </ContributorPlace>
+        <Website>
+          <WebsiteRole>07</WebsiteRole>
+          <WebsiteLink>http://www.publishersite.com/link.html</WebsiteLink>
+        </Website>
+        <Website>
+          <WebsiteRole>42</WebsiteRole>
+          <WebsiteLink>https://www.twitter.com/author</WebsiteLink>
+        </Website>
+        <ContributorDate>
+          <ContributorDateRole>50</ContributorDateRole>
+          <DateFormat>14</DateFormat>
+          <Date>19880507T174343-0400</Date>
+        </ContributorDate>
+        <Gender>u</Gender>
       </Contributor>
       <NoEdition/>
       <Language>
